@@ -10,6 +10,7 @@ const HOSTNAME = process.env.HOSTNAME;
 const PORT = process.env.PORT || process.env.BACKUPPORT;
 
 
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(expressLayouts)
@@ -17,16 +18,5 @@ app.use(expressLayouts)
 app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
 app.use('/', routes)
-
-
-//Connecting to our mongodb database
-/*
-
-
-app.get('/', (req, res) => {
-    res.send('Testing if this works');
-});
-*/
-
 
 app.listen(PORT, HOSTNAME, () => console.log(`  [Server Started at http://${HOSTNAME}:${PORT}]\n  [Listening on PORT:${PORT}]`));

@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
-const db = mongoose.connection;
+require('dotenv').config(); // Load dotenv early
 
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Not connecting :('));
 db.once('open', function() {
-    console.log('Connected :)')
+    console.log('  ~ Connected :) ~')
 });
 
 (async() => {
@@ -11,8 +12,9 @@ db.once('open', function() {
         await mongoose.connect(process.env.DB_URI);
         console.log('  [Connected to MongoDB]');
     } catch (error) {
-        console.error('*Error connecting to MongoDB:', error.message);
+        console.error('  - Error connecting to MongoDB:', error.message);
     }
 })();
 
-require('./track');
+
+require('./Meals');
