@@ -21,14 +21,7 @@ app.use('/', routes)
 
 //Connecting to our mongodb database
 /*
-(async() => {
-    try {
-        await mongoose.connect(process.env.DB_URI);
-        console.log('  [Connected to MongoDB]');
-    } catch (error) {
-        console.error('*Error connecting to MongoDB:', error.message);
-    }
-})();
+
 
 app.get('/', (req, res) => {
     res.send('Testing if this works');
