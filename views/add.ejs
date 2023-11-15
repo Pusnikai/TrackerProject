@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>Add Meal</h2>
+    <form action="/add" method="POST">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="mealtype">Meal Type:</label>
+        <select name="mealtype" required>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snack">Snack</option>
+        </select>
+
+        <label for="description">Description:</label>
+        <textarea name="description"></textarea>
+
+        <label for="ingredients">Ingredients:</label>
+        <textarea name="ingredients"></textarea>
+
+        <label for="calories">Calories:</label>
+        <input type="number" name="calories" required>
+
+        <label for="protein">Protein:</label>
+        <input type="number" name="protein">
+
+        <label for="carbohydrates">Carbohydrates:</label>
+        <input type="number" name="carbohydrates">
+
+        <label for="fats">Fats:</label>
+        <input type="number" name="fats">
+
+        <label for="recipe">Recipe:</label>
+        <textarea name="recipe"></textarea>
+
+        <label for="'image">Image:</label>
+        <input type="file" name="'image" accept="image/*" required>
+
+        <button type="submit">add meal</button>
+
+
+
+    </form>
+</div>

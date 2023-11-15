@@ -7,6 +7,7 @@ const MealsSchema = new mongoose.Schema({
     calories: { type: Number, required: true },
     macronutrient: { protein: Number, carbohydrates: Number, fats: Number },
     recipe: { type: String, required: false },
+    mealtype: { type: String, require: true },
     image: { type: String, required: 'This field is required.' },
     date: { type: Date, default: Date.now },
 });

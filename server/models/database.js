@@ -16,5 +16,4 @@ db.once('open', function() {
     }
 })();
 
-
 require('./Meals');
