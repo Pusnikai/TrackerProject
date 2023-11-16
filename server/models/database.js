@@ -1,12 +1,13 @@
+//importing mongoose and loading my .env variable
 const mongoose = require('mongoose');
-require('dotenv').config(); // Load dotenv early
+require('dotenv').config();
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Not connecting :('));
 db.once('open', function() {
     console.log('  ~ Connected :) ~')
 });
-
+// Connect to MongoDB using Mongoose
 (async() => {
     try {
         await mongoose.connect(process.env.DB_URI);

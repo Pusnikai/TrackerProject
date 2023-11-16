@@ -1,7 +1,64 @@
-body {
-    background-color: black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-:root {
-    font-family: serif;
+body {
+    background-color: black;
+    color: #ffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    background-color: #222;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Title-Logo {
+    color: #ffff;
+    margin: 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list {
+    text-decoration: none;
+    color: #ffff;
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.category {
+    background-color: #444;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    background-color: #5cb85c;
+    color: #ffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
 }

@@ -1,5 +1,7 @@
+//import mongoose for my object model
 const mongoose = require('mongoose');
 
+//defining my schema for my collection
 const MealsSchema = new mongoose.Schema({
     name: { type: String, required: true },
     description: { type: String, required: false },
@@ -12,6 +14,8 @@ const MealsSchema = new mongoose.Schema({
     date: { type: Date, default: Date.now },
 });
 
+//creating mongoose model for our schema
 const Meal = mongoose.model('Meal', MealsSchema);
 
+//exporting the model to use for other file
 module.exports = Meal

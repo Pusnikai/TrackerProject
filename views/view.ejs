@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>View Meals</h1>
+
+    <% if (Meals.length > 0) { %>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Meal Type</th>
+                    <th>Ingredients</th>
+                    <th>Calories</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% Meals.forEach(meal => { %>
+
+                    <tr>
+                        <td>
+                            <%= meal.name %>
+                        </td>
+                        <td>
+                            <%= meal.mealtype %>
+                        </td>
+                        <td>
+                            <%= meal.ingredients %>
+                        </td>
+                        <td>
+                            <%= meal.calories %>
+                        </td>
+                    </tr>
+
+                    <% }); %>
+            </tbody>
+        </table>
+
+        <% } else { %>
+            <p>No meals found.</p>
+            <% } %>
+</div>
