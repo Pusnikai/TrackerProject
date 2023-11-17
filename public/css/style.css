@@ -6,7 +6,7 @@
 
 body {
     background-color: black;
-    color: #ffff;
+    color: #fff;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -22,7 +22,7 @@ body {
 }
 
 .Title-Logo {
-    color: #ffff;
+    color: #5cb85c;
     margin: 0;
 }
 
@@ -31,10 +31,15 @@ body {
     display: flex;
 }
 
-.nav-list {
+.nav-link {
     text-decoration: none;
-    color: #ffff;
+    color: #fff;
     margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #5cb85c;
 }
 
 main {
@@ -55,10 +60,38 @@ main {
     text-align: center;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    color: #5cb85c;
+}
+
+input,
+select,
+textarea,
 button {
-    background-color: #5cb85c;
-    color: #ffff;
-    padding: 10px 20px;
+    margin-bottom: 15px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
+}
+
+select,
+textarea {
+    width: 100%;
+}
+
+button {
+    background-color: #5cb85c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
 }
